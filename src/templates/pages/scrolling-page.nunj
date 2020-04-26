@@ -1,0 +1,33 @@
+{% extends "../ext/base.nunj" %}
+
+{% block content %}
+	<main class="page scrolling-page">
+		<div class="container">
+			<h1 class="scrolling-page__title">{{scrollingMenu.pageTitle}}</h1>
+
+			<nav class="scrolling-page__nav">
+				<ul class="scrolling-page__list">
+					{% for item in scrollingMenu.menu %}
+						<li class="scrolling-page__list-item">
+							<a class="scrolling-page__link" href="{{item.link}}" data-scroll-anchor="scrolling-section-{{loop.index}}">
+								{{item.caption}}
+							</a>
+						</li>
+					{% endfor %}
+				</ul>
+			</nav>
+
+			{% for item in scrollingMenu.sections %}
+				<section class="scrolling-page__section" data-scroll-target="scrolling-section-{{loop.index}}">
+					<h2 class="scrolling-page__section-title">
+						{{item.title}}
+					</h2>
+					<div class="scrolling-page__text">
+						{{item.text}}
+					</div>
+				</section>
+			{% endfor %}
+		</div>
+	</main>
+
+{% endblock content %}

@@ -1,10 +1,13 @@
 {% from "./_head-scripts.nunj" import headScripts %}
+
+{% from "../../components/menu/menu.nunj" import menu %}
+
 <!DOCTYPE html>
 <html>
 	<head>
 		<!-- Client-side programming by sborkaproject.com -->
 		<meta charset="utf-8" />
-		<title>{% block title %}Project{% endblock %}</title>
+		<title>{% block title %}Polygon{% endblock %}</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
 		{{ headScripts() }}
@@ -14,6 +17,8 @@
 		{% endblock stylesheets %}
 	</head>
 	<body>
+
+		{% include '../../components/header/header.nunj' %}
 
 		<div class="wrapper">
 			{% block content %}

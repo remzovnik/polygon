@@ -21,6 +21,7 @@ class ProjectApp {
 		this.utils = require('./utils/utils').default;
 		this.classes = {
 			Signal: require('./classes/Signal').default,
+			ScrollAnchor: require('./classes/ScrollAnchor').default,
 		};
 		this.components = {};
 		this.helpers = {};

@@ -43,7 +43,8 @@
 		"eqeqeq": "warn",
 		"prefer-destructuring": "off",
 		"lines-between-class-members": "off",
-		"spaced-comment": "off"
+		"spaced-comment": "off",
+		"no-debugger": "off"
 	},
 	"plugins": [
 		"babel",

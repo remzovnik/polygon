@@ -1,6 +1,5 @@
 {% extends "../ext/base.nunj" %}
 
-{% from "../../components/menu/menu.nunj" import menu %}
 {% from "../../components/button/button.nunj" import button %}
 
 {# Пример расширения существующего блока #}
@@ -8,8 +7,6 @@
 {# {% block title %}Home / {{ super() }}{% endblock title %} #}
 
 {% block content %}
-
-	{% include '../../components/header/header.nunj' %}
 
 	<div class="container">
 
@@ -22,9 +19,9 @@
 		</div>
 
 		<div style="padding:20px 0;">
-			
+
 			<h2 style="margin-bottom: 15px;">Пример использования циклов и функции range():</h2>
-			
+
 			<div class="row">
 				{% for i in range(1, 13)  %}
 					<span>{{ i }}</span>
