@@ -4,7 +4,7 @@
   "description": "Boilerplate for html+js+css apps by Sborka Project",
   "repository": {
     "type": "git",
-    "url": "https://github.com/sborkaproject/SP.Starter"
+    "url": "https://github.com/remzov/polygon"
   },
   "scripts": {
     "start": "gulp",

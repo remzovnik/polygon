@@ -5,7 +5,7 @@
 		<div class="container">
 			<h1 class="scrolling-page__title">{{scrollingMenu.pageTitle}}</h1>
 
-			<nav class="scrolling-page__nav">
+			<nav class="scrolling-page__nav" data-scroll-nav>
 				<ul class="scrolling-page__list">
 					{% for item in scrollingMenu.menu %}
 						<li class="scrolling-page__list-item">

@@ -12,7 +12,7 @@ import { gsap } from 'gsap';
 global.gsap = gsap;
 
 gsap.defaults({
-	overwrite: 'auto',
+	overwrite: 'auto'
 });
 
 class ProjectApp {
@@ -21,11 +21,12 @@ class ProjectApp {
 		this.utils = require('./utils/utils').default;
 		this.classes = {
 			Signal: require('./classes/Signal').default,
-			ScrollAnchor: require('./classes/ScrollAnchor').default,
 		};
 		this.components = {};
 		this.helpers = {};
-		this.modules = {};
+		this.modules = {
+			ScrollAnchor: require('./modules/ScrollAnchor').default
+		};
 		document.addEventListener('DOMContentLoaded', () => {
 			document.documentElement.classList.remove('_loading');
 		});

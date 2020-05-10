@@ -95,6 +95,32 @@ const utils = {
 			number % 100 > 4 && number % 100 < 20 ? 2 : cases[number % 10 < 5 ? number % 10 : 5]
 		];
 	},
+
+	animate({duration, render, timing}) {
+		const startTime = performance.now();
+
+		requestAnimationFrame(function animate(currentTime) {
+			let progress = (currentTime - startTime) / duration;
+
+			if (progress > 1) {
+				progress = 1;
+			}
+
+			const timingProgress = timing(progress);
+
+			render(timingProgress);
+
+			if (progress < 1) {
+				requestAnimationFrame(animate);
+			}
+
+		});
+	},
+
+	easeInOutQuad(t) {
+		return (t < 0.5) ? (2 * t * t) : (-1 + (4 - 2 * t) * t);
+	}
+
 };
 
 export default utils;

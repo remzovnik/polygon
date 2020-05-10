@@ -22,7 +22,7 @@ const env = {
 	isSafari: envObject.browser === '_safari',
 
 	// Dev environment
-	isLocal: envObject.isLocal,
+	isLocal: envObject.isLocal
 };
 
 window.environmentObject = null;
