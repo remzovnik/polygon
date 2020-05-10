@@ -9,7 +9,8 @@
 				<ul class="scrolling-page__list">
 					{% for item in scrollingMenu.menu %}
 						<li class="scrolling-page__list-item">
-							<a class="scrolling-page__link" href="{{item.link}}" data-scroll-anchor="scrolling-section-{{loop.index}}">
+							<a class="scrolling-page__link {% if loop.index0 == 0 %} scrolling-page__link_active {% endif %}" href="{{item.link}}"
+								data-scroll-anchor="scrolling-section-{{loop.index}}">
 								{{item.caption}}
 							</a>
 						</li>
