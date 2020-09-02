@@ -67,7 +67,7 @@
     "postcss-sprites": "^4.2.1",
     "prettier": "^1.19.1",
     "raw-loader": "^4.0.0",
-    "static-eval": "^2.0.3",
+    "static-eval": "^2.0.2",
     "stylelint": "^13.2.1",
     "stylelint-config-prettier": "^8.0.1",
     "stylelint-prettier": "^1.1.2",
